@@ -11,29 +11,22 @@ public class Mondai149723 {
 		int n = stdIn.nextInt();
 
 		//処理部分
-		//上半分ループ
-		for(int i = 1; i < n; i++){
+		for(int i = 0,count = 0; i >= 0; count++){
 			//矢印の為のループ
-			for(int j = 1; j < i; j++){
+			for(int j = i; j > 0; j--){
 				System.out.print(">");
 			}
 			//アスタリスクの為のループ
-			for(int j = 0; j <= (n-i); j++){
-				System.out.print("*");
-			}
-			System.out.println();
-		}
-		//下半分ループ
-		for(int i = 1; i <= n; i++){
-			//矢印の為のループ
 			for(int j = (n-i); j > 0; j--){
-				System.out.print(">");
-			}
-			//アスタリスクの為のループ
-			for(int j = 0; j < i; j++){
 				System.out.print("*");
 			}
 			System.out.println();
+
+			if(count < n-1){
+				i++;
+			}else{
+				i--;
+			}
 		}
 
 	}
